@@ -1,0 +1,6 @@
+parek 10
+knedlik 20
+salam 5
+kebab 20
+Humus 10
+Vegetarianske_Jidlo 10
