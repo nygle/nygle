@@ -38,7 +38,7 @@ int main() {
 
     //string radek;
     //while (getline(cteni, radek)) {
-    //    cout << radek << endl;                                //když budu chtít celou větu + cislo vedle toho
+    //    cout << radek << endl;                                //když budu chtít celou větu + cislo vedle toho (cislo bude string)
     //}
     //cteni.close();
 
