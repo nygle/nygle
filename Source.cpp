@@ -27,7 +27,7 @@ int main() {
         }
 
         cout << "Jidlo: " << slovo << " - " << cislo << "x" << endl;        //slovicko + cislo
-        suma += cislo;                                                        //když chci sčíst všechny čísla
+        suma += cislo;                                                        //když chci sečíst všechny čísla
     }
 
     cout << "kolikrat jsem snedl jidlo?: " << suma << "x" << endl;
