@@ -17,7 +17,7 @@ int main() {
 
     string slovo;
     const int N = 1000;
-    int cislo, suma = 0;        //zakladni deklerace a další věci
+    int cislo, suma = 0;        //zakladni deklarace a další věci
     string pole[N];
     int i = 0;
 
