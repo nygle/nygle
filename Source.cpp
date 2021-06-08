@@ -1,59 +1,67 @@
 #include <iostream>
-#include <string>
 #include <fstream>
+#include <string>
 using namespace std;
 
 int main() {
-	string soubor = "yo.txt";
-	ifstream cti;
-	cti.open(soubor);
 
-	if (cti.fail()) {
-		cout << "chyba s souborem" << endl;
-		system("Pause");
-		return 0;
-	}
+    ifstream cteni;
+    string text = "yo.txt"; // jakej koliv txt file ale musí být společně s Source.cpp v složce
+    cteni.open(text);
 
+    if (cteni.fail()) {
+        cout << "Chyba " << endl;                    //když tam bude chyba v čtení z TXT nebo tam bude jinej název text souboru tak to ukáže tohle.
+        system("Pause");
+        return 0;
+    }
 
+    string slovo;
+    const int N = 1000;
+    int cislo, suma = 0;        //zakladni deklerace a další věci
+    string pole[N];
+    int i = 0;
 
-	string text;
-	int const N = 1000;
-	int cisla, suma = 0;
-	int i = 0;
-	string pole[N];
+    while (cteni >> slovo >> cislo) {
+        if (slovo == "Vegetarianske_Jidlo") {
+            continue;                                                            //když chcu přeskočit slovičko
+        }
 
-	while (cti >> text >> cisla) {
-		if (text == "Humus") {
-			continue;
-		}
-		cout << "Jidlo: " << text << " - " << cisla << "x" << endl;
-		suma += cisla;
-	}
-	cout << "kolikrat jsem mel tohle jidlo za tyden?: " << suma << "x" << endl;
+        cout << "Jidlo: " << slovo << " - " << cislo << "x" << endl;        //slovicko + cislo
+        suma += cislo;                                                        //když chci sčíst všechny čísla
+    }
 
-
-
-
-
-	while(getline(cti, text)) {
-		cout << text << endl;
-}
-	cti.close();
+    cout << "kolikrat jsem snedl jidlo?: " << suma << "x" << endl;
 
 
 
 
-	while (cti >> text) {
-		pole[i] = text;
-		i++;
-	}
-	cti.close();
-	for (int a = 0; a < i; a++) {
-		cout << pole[a] << endl;
-	}
+
+    //string radek;
+    //while (getline(cteni, radek)) {
+    //    cout << radek << endl;                                //když budu chtít celou větu + cislo vedle toho
+    //}
+    //cteni.close();
 
 
-	system("Pause");
-	return 0;
+
+
+
+
+    //while (cteni >> slovo) {
+    //    pole[i] = slovo;
+    //    i++;
+    //}
+    //cteni.close();
+
+    //for (int a = 0; a < i; a++) {
+    //    cout << " " << pole[a] << " ";                                 //pod sebou když budu chtít
+    //}
+
+
+
+
+
+    system("Pause");
+    return 0;
 
 }
